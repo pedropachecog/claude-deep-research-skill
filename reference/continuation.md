@@ -22,7 +22,7 @@ Trigger auto-continuation when report exceeds 18,000 words in single run.
 
 ```json
 {
-  "version": "2.1.1",
+  "version": "3.0.0",
   "report_id": "[unique_id]",
   "file_path": "[absolute_path_to_report.md]",
   "mode": "[quick|standard|deep|ultradeep]",

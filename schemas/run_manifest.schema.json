@@ -62,7 +62,7 @@
           "description": "Scholarly API provider if configured (e.g. openalex, semantic_scholar)"
         }
       },
-      "default": { "primary": "WebSearch", "scholarly": null }
+      "default": { "primary": "search-cli", "scholarly": null }
     },
     "report_dir": {
       "type": "string",

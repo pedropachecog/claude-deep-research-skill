@@ -112,6 +112,16 @@ Use Task tool with general-purpose agents (3-5 agents) for:
 ```
 This prevents synthesis fatigue when merging results from 3-5 agents.
 
+**Evidence persistence (v3.0):** After each retrieval batch, persist evidence immediately:
+```bash
+# Register the source first (returns stable source_id)
+python scripts/citation_manager.py register-source --json '{"raw_url": "...", "title": "..."}' --dir [folder]
+
+# Then persist each evidence span from that source
+python scripts/evidence_store.py add --json '{"source_id": "...", "quote": "exact text", "evidence_type": "direct_quote", "locator": "page 5"}' --dir [folder]
+```
+Evidence must not live only in model context — it must be persisted to `evidence.jsonl` before synthesis begins. This ensures continuation agents and claim-support verification can access the full evidence trail.
+
 **Example parallel execution (using WebSearch):**
 ```
 [Single message with multiple tool calls]

@@ -1,4 +1,8 @@
-# Deep Research Skill for Claude Code
+# Deep Research Skill for Claude Code (Local Model Fork)
+
+> **🍴 Fork Notice:** This is a fork of [199-biotechnologies/claude-deep-research-skill](https://github.com/199-biotechnologies/claude-deep-research-skill) modified for **local model compatibility**.
+>
+> **⚙️ Dependency:** Requires **SearXNG MCP** (`mcp__searxng__searxng_web_search`, `mcp__searxng__web_url_read`) for web search functionality. This fork replaces Anthropic's built-in WebSearch/WebFetch tools which don't work with local models.
 
 Enterprise-grade research engine for Claude Code. Produces citation-backed reports with source credibility scoring, multi-provider search, and automated validation.
 

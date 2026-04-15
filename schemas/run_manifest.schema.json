@@ -55,7 +55,7 @@
       "properties": {
         "primary": {
           "type": "string",
-          "description": "Primary search provider (e.g. WebSearch)"
+          "description": "Primary search provider (e.g. mcp__searxng__searxng_web_search)"
         },
         "scholarly": {
           "type": ["string", "null"],

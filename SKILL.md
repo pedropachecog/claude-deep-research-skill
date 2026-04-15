@@ -17,7 +17,7 @@ Deliver citation-tracked research reports through a structured pipeline with evi
 
 ```
 Request Analysis
-+-- Simple lookup? --> STOP: Use WebSearch
++-- Simple lookup? --> STOP: Use mcp__searxng__searxng_web_search
 +-- Debugging? --> STOP: Use standard tools
 +-- Complex analysis needed? --> CONTINUE
 

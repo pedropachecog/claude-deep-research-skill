@@ -81,10 +81,11 @@ Use the returned year for all date-filtered queries and recency checks. Do NOT a
 - For scraping: `search "URL" -m scrape --json`
 - Run via Bash tool: `search "query" --json -c 10`
 
-**Fallback: WebSearch (if search-cli fails or is unavailable)**
-- Built-in Claude web search, no setup required
-- Parameters: `query` (required), optional `allowed_domains`, `blocked_domains`
+**Fallback: mcp__searxng__searxng_web_search (if search-cli fails or is unavailable)**
+- SearXNG privacy-respecting meta-search engine via MCP
+- Parameters: `query` (required), optional `pageno`, `time_range`, `language`
 - Use when: search-cli returns errors, rate-limited, or for domain-restricted queries
+- Returns 30+ results with relevance scores
 
 **Optional: Exa MCP (if configured, for semantic/neural search)**
 - Tool name: `mcp__Exa__exa_search`
@@ -179,9 +180,9 @@ As results arrive:
 
 **Techniques:**
 - Use search-cli for all searches (primary tool, multi-provider)
-- Fall back to WebSearch if search-cli fails or is rate-limited
-- Use WebFetch for deep dives into specific sources (secondary)
-- Use Exa search (via WebSearch with type="neural") for semantic exploration
+- Fall back to mcp__searxng__searxng_web_search if search-cli fails or is rate-limited
+- Use mcp__searxng__web_url_read for deep dives into specific sources (secondary)
+- Use Exa MCP (mcp__Exa__exa_search) for semantic exploration (if configured)
 - Use Grep/Read for local documentation
 - Execute code for computational analysis (when needed)
 - Use Task tool to spawn parallel retrieval agents (3-5 agents)

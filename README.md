@@ -74,7 +74,8 @@ Reports >18K words auto-continue via recursive agent spawning with context prese
 | Tool | Priority | Setup |
 |------|----------|-------|
 | search-cli | **Primary** — all searches go here first | `brew install search-cli` + API keys |
-| WebSearch | Fallback — if search-cli fails or rate-limited | None (built-in) |
+| mcp__searxng__searxng_web_search | Fallback — if search-cli fails or rate-limited | MCP configured (SearXNG meta-search) |
+| mcp__searxng__web_url_read | URL content extraction | MCP configured |
 | Exa MCP | Optional — semantic/neural search alongside search-cli | MCP config |
 
 ## Architecture

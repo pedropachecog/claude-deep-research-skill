@@ -216,16 +216,16 @@ Use Graph-of-Thoughts: branch into 3-4 potential research paths, evaluate, then 
 Your task: Systematically collect information from multiple sources
 
 ## Execute:
-1. Use WebSearch with iterative query refinement (minimum 10 searches)
-2. Use WebFetch to deep-dive into 5-10 most promising sources
+1. Use mcp__searxng__searxng_web_search with iterative query refinement (minimum 10 searches)
+2. Use mcp__searxng__web_url_read to deep-dive into 5-10 most promising sources
 3. Extract key passages with metadata
 4. Track information gaps
 5. Follow 2-3 promising tangents
 6. Ensure source diversity (different domains, perspectives)
 
 ## Tools to Use:
-- WebSearch: For current information and broad coverage
-- WebFetch: For detailed extraction from specific URLs
+- mcp__searxng__searxng_web_search: For current information and broad coverage (SearXNG meta-search engine)
+- mcp__searxng__web_url_read: For detailed extraction from specific URLs
 - Grep/Read: For local documentation if relevant
 - Task: Spawn 2-3 parallel retrieval agents for efficiency
 
